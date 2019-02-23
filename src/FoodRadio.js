@@ -13,7 +13,8 @@ const FoodRadio = ({ checked, label, ...props }) => (
       checked={checked}
       style={{ display: 'none'}}
       {...props}
-    /> {label}
+    />
+    {label}
   </label>
 );
 

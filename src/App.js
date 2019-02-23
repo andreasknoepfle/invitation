@@ -5,6 +5,9 @@ import './App.css';
 import FoodRadio from './FoodRadio';
 import 'whatwg-fetch'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +17,7 @@ class App extends Component {
   initFood() {
     fetch(`https://wt-9933bad0e1d0fa1a4419e30b982036ad-0.sandbox.auth0-extend.com/airtable-get?key=${this.key()}`)
       .then(response => response.json())
-      .then(({ food }) => this.setState({ food, loaded: true }) )
+      .then(({ food, firstName }) => this.setState({ food, firstName, loaded: true }) )
   }
 
   onChangeFood({ target }) {
@@ -42,31 +45,35 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <form>
-            Was möchtest du essen?
-            <br />
-            <FoodRadio
-              label="Vegetarisch"
-              disabled={!this.state.loaded}
-              checked={this.state.food === "Vegetarisch"}
-              onChange={this.onChangeFood.bind(this)}
-            />
-            <FoodRadio
-              label="Vegan"
-              disabled={!this.state.loaded}
-              checked={this.state.food === "Vegan"}
-              onChange={this.onChangeFood.bind(this)}
-            />
-            <FoodRadio
-              label="Alles"
-              disabled={!this.state.loaded}
-              checked={this.state.food === "Alles"}
-              onChange={this.onChangeFood.bind(this)}
-            />
-          </form>
-        </header>
+        <main className="App-main">
+          {!this.state.loaded && <FontAwesomeIcon icon={faSpinner} spin size="2x"/>}
+          {this.state.loaded && <div>
+            <h1>Hallo {this.state.firstName}</h1>
+            <img src={logo} className="App-logo" alt="logo" />
+            <form>
+              Was möchtest du essen?
+              <br />
+              <FoodRadio
+                label="Vegetarisch"
+                disabled={!this.state.loaded}
+                checked={this.state.food === "Vegetarisch"}
+                onChange={this.onChangeFood.bind(this)}
+              />
+              <FoodRadio
+                label="Vegan"
+                disabled={!this.state.loaded}
+                checked={this.state.food === "Vegan"}
+                onChange={this.onChangeFood.bind(this)}
+              />
+              <FoodRadio
+                label="Alles"
+                disabled={!this.state.loaded}
+                checked={this.state.food === "Alles"}
+                onChange={this.onChangeFood.bind(this)}
+              />
+            </form>
+          </div>}
+        </main>
       </div>
     );
   }
