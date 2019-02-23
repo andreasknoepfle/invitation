@@ -7,8 +7,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.food-radio {
+  padding: 1em 0.3em;
+  cursor: pointer;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.food-radio:hover {
+  color: grey;
+}
+
+.food-radio:hover svg {
+  color: red;
 }
