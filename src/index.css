@@ -1,21 +1,50 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 16pt;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #ffb347;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffcc33, #ffb347); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .food-radio {
   padding: 1em 0.3em;
   cursor: pointer;
+  display: inline-block;
 }
 
 .food-radio:hover {
-  color: grey;
+  color: red;
 }
 
-.food-radio:hover svg {
-  color: red;
+.food-radio span {
+  margin: 0 1em 0 0.3em;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  color: white;
+}
+
+h1 {
+  font-size: 50pt;
+}
+
+pre {
+  padding: 1em;
+}
+
+@media (max-width: 40rem) {
+  .column {
+    flex: 1 1 auto !important;
+    margin-left: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
 }

@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faCircle } from '@fortawesome/free-solid-svg-icons';
-const FoodRadio = ({ checked, label, ...props }) => (
-  <label class='food-radio'>
+const Radio = ({ checked, label, ...props }) => (
+  <label className='food-radio'>
     {
       checked ? <FontAwesomeIcon icon={faCheckCircle} /> : <FontAwesomeIcon icon={faCircle} />
     }
     <input
       type="radio"
-      name="food"
       value={label}
       checked={checked}
       style={{ display: 'none'}}
       {...props}
     />
-    {label}
+    <span>{label}</span>
   </label>
 );
 
-export default FoodRadio;
+export default Radio;

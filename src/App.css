@@ -2,19 +2,64 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+@media (min-width: 40.0rem) {
+  .App {
+    text-align: left;
+  }
 }
 
-.App-main {
-  background-color: #eee;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App-main, footer.Footer {
+  max-width: 900px;
   color: #333;
+}
+
+footer.Footer {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.Footer-signature {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.App-logo {
+  height: 10em;
+  margin: 2em;
+}
+
+.Invitation-item {
+  padding: 1em;
+}
+
+.Invitation {
+  margin: 2em 0 1em;
+}
+
+.Greeting, header {
+  text-align: center;
+}
+
+.Comes {
+  margin: 1em 0;
+}
+
+.Eats {
+  margin: 1em 0;
+}
+
+.Sleeping ul li {
+  /*
+    * We want the bullets outside of the list,
+    * so the text is aligned. Now the actual bullet
+    * is outside of the list’s container
+    */
+  list-style-position: outside;
+
+  /*
+    * Because the bullet is outside of the list’s
+    * container, indent the list entirely
+    */
+  margin-left: 1em;
 }
