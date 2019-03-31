@@ -187,7 +187,7 @@ class App extends Component {
                </div>
                <div className="column column-50 Sleeping">
                  <h2>Location & Anfahrt</h2>
-                 <a href="https://www.waldparadies-borkheide.de/">Website vom Waldparadies</a>
+                 Die Adresse vom <a href="https://www.waldparadies-borkheide.de/">Waldparadies Borkheide</a> ist:
                  <pre>
                    Paradiesweg 3<br/>
                    14822 Borkheide

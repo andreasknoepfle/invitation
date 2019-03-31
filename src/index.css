@@ -19,7 +19,7 @@ body {
 }
 
 .food-radio:hover {
-  color: red;
+  color: #fd5012;
 }
 
 .food-radio span {
@@ -29,7 +29,15 @@ body {
 h1, h2, h3, h4 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
-  color: white;
+  color: #fd5012;
+}
+
+.row {
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: inside;
 }
 
 h1 {
@@ -38,6 +46,12 @@ h1 {
 
 pre {
   padding: 1em;
+  border-left: 0.3rem solid #fd5012;
+  background-color: white;
+}
+
+a {
+  color: #fd5012;
 }
 
 @media (max-width: 40rem) {
