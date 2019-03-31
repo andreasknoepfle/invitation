@@ -14,14 +14,15 @@
 }
 
 footer.Footer {
-  margin-top: 2em;
   margin-bottom: 2em;
+  vertical-align: middle;
 }
 
 .Footer-signature {
   font-family: 'Amatic SC', cursive;
   font-size: 3em;
   font-weight: 700;
+  margin-left: 3rem;
 }
 
 .App-heart {
@@ -40,11 +41,11 @@ footer.Footer {
 }
 
 .Invitation-item {
-  padding: 1em;
+  text-align: center;
 }
 
-.Invitation {
-  margin: 2em 0 1em;
+.Greeting {
+  margin-bottom: 4em;
 }
 
 .Greeting, header {
@@ -57,6 +58,14 @@ footer.Footer {
 
 .Eats {
   margin: 1em 0;
+}
+
+.iconContainer {
+  text-align: center;
+}
+
+.icon {
+  max-width: 60%;
 }
 
 .Sleeping ul li {

@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import queryString from 'query-string'
 import banner from './banner.png';
-import heart from './heart.png';
+import heart from './heart-small.png';
+import sleep from './sleep.png';
+import food from './food.png';
+import drive from './drive.png';
+import coming from './coming.png';
 import './loading.css';
 import './App.css';
 import Invitation from './Invitation';
@@ -121,8 +125,8 @@ class App extends Component {
              </div>
              <Invitation />
              <div className="row">
-               <div className="column column-50">
-                 Can come icon
+               <div className="column column-50 iconContainer">
+                 <img src={coming} alt="coming" className="icon" />
                </div>
                <div className="column column-50">
                  <Comes
@@ -140,8 +144,8 @@ class App extends Component {
              </div>
              { (this.state.comes === "Ja" || this.state.partnerComes === "Ja" ) &&
               <div className="row">
-                <div className="column column-50">
-                  Happa
+                <div className="column column-50 iconContainer">
+                  <img src={food} alt="coming" className="icon"/>
                 </div>
                 <div className="column column-50">
                   { this.state.comes === "Ja" && <Eats
@@ -164,8 +168,8 @@ class App extends Component {
               </div>
              }
              <div className="row">
-               <div className="column column-50">
-                 Schlaf icon
+               <div className="column column-50 iconContainer">
+                 <img src={sleep} alt="sleep" className="icon"/>
                </div>
                <div className="column column-50 Sleeping">
                  <h2>Übernachtung</h2>
@@ -181,9 +185,10 @@ class App extends Component {
                  </ul>
                </div>
              </div>
+             <Map />
              <div className="row">
-               <div className="column column-50">
-                 Road icon
+               <div className="column column-50 iconContainer">
+                 <img src={drive} alt="drive" className="icon"/>
                </div>
                <div className="column column-50 Sleeping">
                  <h2>Location & Anfahrt</h2>
@@ -193,16 +198,18 @@ class App extends Component {
                    14822 Borkheide
                  </pre>
                  <p>Für die Anfahrt mit dem Zug ist der Bahnhof Borkheide direkt nebenan.</p>
-                 <Map />
                </div>
              </div>
-             <p>Wir freuen uns unglaublich darauf mit Euch allen kräftig zu feiern!</p>
            </div>
           }
         </main>
-        <footer className="container Footer">
-          <div className="Footer-signature">Andreas & Daniela</div>
-        </footer>
+        {this.state.loaded &&
+          <footer className="container Footer">
+             <p>Wir freuen uns unglaublich darauf mit Euch allen kräftig zu feiern!</p>
+             <img src={heart} alt="coming" className="heart" />
+             <span className="Footer-signature">Andreas & Daniela</span>
+          </footer>
+        }
       </div>
     );
   }

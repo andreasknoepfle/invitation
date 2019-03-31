@@ -16,6 +16,7 @@ body {
   padding: 1em 0.3em;
   cursor: pointer;
   display: inline-block;
+  font-size: 1.7rem;
 }
 
 .food-radio:hover {
@@ -33,7 +34,7 @@ h1, h2, h3, h4 {
 }
 
 .row {
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
 
 ul {
@@ -42,6 +43,10 @@ ul {
 
 h1 {
   font-size: 50pt;
+}
+
+iframe {
+  margin-bottom: 2em;
 }
 
 pre {
