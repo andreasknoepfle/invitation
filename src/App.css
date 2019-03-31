@@ -24,9 +24,19 @@ footer.Footer {
   font-weight: 700;
 }
 
-.App-logo {
+.App-heart {
   height: 10em;
   margin: 2em;
+}
+
+.App-logo { margin-top: -20px; }
+
+.extra {
+  background-color: #ffeecc;
+  border: 1px solid black;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
 }
 
 .Invitation-item {
