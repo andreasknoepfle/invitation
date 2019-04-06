@@ -182,12 +182,12 @@ class App extends Component {
                  <p>Alles &uuml;ber <a href="mailto:waldparadies@online.de">waldparadies@online.de</a> buchbar.</p><br/>
                  <b>5 Minuten zu Fuß:</b>
                  <ul>
-                   <li><a href="http://www.fliegerheim.de">Fliegerheim</a><br/><small>über den Namen Kn&ouml;pfle sind 20 Zimmer abrufbar<br/> Doppelzimmer 110&euro; oder Einzelzimmer 85&euro;<br/> Zimmer sind reserviert bis zum 15.07.2019</small></li>
+                   <li><a href="http://www.fliegerheim.de">Fliegerheim</a><br/><small>&Uuml;ber den Namen Kn&ouml;pfle sind 20 Zimmer abrufbar<br/> Doppelzimmer 110&euro; oder Einzelzimmer 85&euro;<br/> Zimmer sind reserviert bis zum 15.07.2019</small></li>
                  </ul>
                  <b>In Borkheide (15 Minuten und mehr)</b>
                  <ul>
                    <li><a href="http://www.kieltyka.de">Hotel Kieltyka</a><br/>
-                     <small>ca 50&euro; pro Person</small>
+                     <small>Ca 50&euro; pro Person</small>
                    </li>
                    <li>Verschiedene Ferienwohnungen<br/>
                      <small>Einfach mal <a href="http://www.ferienwohnungen.de/europa/deutschland/borkheide">hier</a> oder auf Airbnb schauen.</small>
@@ -218,7 +218,7 @@ class App extends Component {
                     <small>Unsere zwei Trauzeuginnen/Schwestern k&ouml;nnt ihr in solchen F&auml;llen gerne unter <a href="mailto:gentner.kathrin@gmail.com">gentner.kathrin@gmail.com</a> oder <a href="mailto:miriam.knoepfle@gmail.com">miriam.knoepfle@gmail.com</a> kontaktieren.</small>
                   </li>
                   <li>Hilfe, was kann ich anziehen?<br/>
-                    <small>Komm am besten so wie ihr Euch wohlf&uuml;hlt. Da unsere Zeremonie im Wald hinter dem Haus stattfinden wird empfehlen wir euch bequeme gartentaugliche Schuhe (sind auch besser zum tanzen).</small>
+                    <small>Komm am besten so wie ihr Euch wohlf&uuml;hlt. Da unsere Zeremonie im Wald hinter dem Haus stattfinden wird, empfehlen wir Euch bequeme gartentaugliche Schuhe (sind auch besser zum tanzen).</small>
                   </li>
                   <li>Ich m&ouml;chte Euch was schenken, ich wei&szlig; aber nicht was.<br/><small>Knete geht immer.</small></li>
                   <li>Ich m&ouml;chte gerne mit meiner Kutsche kommen. Wo kann ich sie parken?<br/><small>Am Bahnhof von Borkheide gibt es ausreichen Parkpl&auml;tze.</small></li>
