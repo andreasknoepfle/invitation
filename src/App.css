@@ -60,8 +60,6 @@ footer.Footer {
   border-radius: 0.5em;
 }
 .Bubble:after {
-	right: 100%;
-	top: 50%;
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -69,9 +67,21 @@ footer.Footer {
 	position: absolute;
 	pointer-events: none;
 	border-color: rgba(255, 255, 255, 0);
-	border-right-color: #efdebc;
 	border-width: 10px;
+}
+
+.Bubble-left:after {
+	right: 100%;
+	top: 50%;
 	margin-top: -10px;
+	border-right-color: #efdebc;
+}
+
+.Bubble-top:after{
+  bottom: 100%;
+  left: 50%;
+  margin-left: -10px;
+	border-bottom-color: #efdebc;
 }
 
 .Greeting, header {

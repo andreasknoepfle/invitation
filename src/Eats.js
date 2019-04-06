@@ -21,6 +21,7 @@ const Eats = ({ value, onChange, name }) => (
       checked={value === "Alles"}
       onChange={onChange}
     />
+    { value && <div className="Bubble Bubble-top">Alles klar!</div>}
   </form>
 );
 
