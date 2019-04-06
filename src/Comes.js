@@ -16,6 +16,8 @@ const Comes = ({ comes, onChange, name }) => (
       checked={comes === "Nein"}
       onChange={onChange}
     />
+    { comes && comes === "Ja" && <span className="Bubble">Juhu! :)</span>}
+    { comes && comes === "Nein" && <span className="Bubble">Schade :(</span>}
   </form>
 );
 

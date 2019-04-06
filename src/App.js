@@ -121,7 +121,7 @@ class App extends Component {
            <div>
              <div className="Greeting">
                <h1>{dear(this.state.gender, this.state.firstName)}{this.state.partner && ", " + dear(this.state.partnerGender, this.state.partnerFirstName)}</h1>
-               <p>Wir möchten {this.wordingInvite()} ganz herzlich zu unserer Hochzeit einladen.</p>
+               <p>Wir möchten {this.wordingInvite()} ganz herzlich zu unserer <span class="wedding">Hochzeit</span> einladen.</p>
              </div>
              <Invitation />
              <div className="row">
@@ -143,29 +143,29 @@ class App extends Component {
                </div>
              </div>
              { (this.state.comes === "Ja" || this.state.partnerComes === "Ja" ) &&
-              <div className="row">
-                <div className="column column-50 iconContainer">
-                  <img src={food} alt="coming" className="icon"/>
-                </div>
-                <div className="column column-50">
-                  { this.state.comes === "Ja" && <Eats
+               <div className="row">
+                 <div className="column column-50 iconContainer">
+                   <img src={food} alt="coming" className="icon"/>
+                 </div>
+                 <div className="column column-50">
+                   { this.state.comes === "Ja" && <Eats
                                                     value={this.state.food}
                                                     name={this.wording(this.state.firstName)}
                                                     onChange={this.onChangeFood.bind(this)}
-                  />}
-                  { this.state.partner && this.state.partnerComes === "Ja" &&
-                    <Eats
-                      value={this.state.partnerFood}
-                      name={this.state.partnerFirstName}
-                      onChange={this.onChangePartnerFood.bind(this)}
-                    />
-                  }
-                  <h2>M&uuml;ssen wir sonst noch etwas wissen?</h2>
-                  <textarea onChange={this.onChangeExtra.bind(this)} placeholder="Allergien etc." className="extra">
-                    {this.state.extra}
-                  </textarea>
-                </div>
-              </div>
+                   />}
+                   { this.state.partner && this.state.partnerComes === "Ja" &&
+                     <Eats
+                       value={this.state.partnerFood}
+                       name={this.state.partnerFirstName}
+                       onChange={this.onChangePartnerFood.bind(this)}
+                     />
+                   }
+                   <h2>M&uuml;ssen wir sonst noch etwas wissen?</h2>
+                   <textarea onChange={this.onChangeExtra.bind(this)} placeholder="Allergien oder so?" className="extra">
+                     {this.state.extra}
+                   </textarea>
+                 </div>
+               </div>
              }
              <div className="row">
                <div className="column column-50 iconContainer">
@@ -175,13 +175,23 @@ class App extends Component {
                  <h2>Übernachtung</h2>
                  <b>Direkt im Waldparadies:</b>
                  <ul>
-                   <li>Zelt <br/><small>(Platz für 10 Zelte)</small></li>
-                   <li>Yogaraum über der Scheune <br /><small>(Platz für 10 Menschen)</small></li>
-                   <li>Hanging-Tent im Wald <br/><small>(ca 5 Zelte verfügbar, wird vom Waldparadies gestellt)</small></li>
+                   <li>Eigenes Zelt <br/><small>10&euro; pro Person, Platz für ca. 8 Zelte</small></li>
+                   <li>Yogaraum über der Scheune <br /><small>25&euro; pro Person, Platz für 10 Personen</small></li>
+                   <li>Hanging-Tent im Wald <br/><small>59-75&euro; insgesamt 6 Zelte verfügbar f&uuml;r 2 oder 3 Personen, wird vom Waldparadies gestellt</small></li>
                  </ul>
+                 <p>Alles &uuml;ber <a href="mailto:waldparadies@online.de">waldparadies@online.de</a> buchbar.</p><br/>
                  <b>5 Minuten zu Fuß:</b>
                  <ul>
-                   <li>Fliegerheim <br/><small>(über den Namen Gentner 20 Zimmer abrufbar)</small></li>
+                   <li><a href="http://www.fliegerheim.de">Fliegerheim</a><br/><small>über den Namen Kn&ouml;pfle sind 20 Zimmer abrufbar<br/> Doppelzimmer 110&euro; oder Einzelzimmer 85&euro;<br/> Zimmer sind reserviert bis zum 15.07.2019</small></li>
+                 </ul>
+                 <b>In Borkheide (15 Minuten und mehr)</b>
+                 <ul>
+                   <li><a href="http://www.kieltyka.de">Hotel Kieltyka</a><br/>
+                     <small>ca 50&euro; pro Person</small>
+                   </li>
+                   <li>Verschiedene Ferienwohnungen<br/>
+                     <small>Einfach mal <a href="http://www.ferienwohnungen.de/europa/deutschland/borkheide">hier</a> oder auf Airbnb schauen.</small>
+                   </li>
                  </ul>
                </div>
              </div>
@@ -200,15 +210,30 @@ class App extends Component {
                  <p>Für die Anfahrt mit dem Zug ist der Bahnhof Borkheide direkt nebenan.</p>
                </div>
              </div>
+             <div className="row">
+               <div className="column">
+                <h2>FAQ</h2>
+                <ul>
+                  <li>Ich m&ouml;chte Euch einen &Uuml;berraschungselefanten vorbeibringen. <br/>Wann kann er kommen?<br/>
+                    <small>Unsere zwei Trauzeuginnen/Schwestern k&ouml;nnt ihr in solchen F&auml;llen gerne unter <a href="mailto:gentner.kathrin@gmail.com">gentner.kathrin@gmail.com</a> oder <a href="mailto:miriam.knoepfle@gmail.com">miriam.knoepfle@gmail.com</a> kontaktieren.</small>
+                  </li>
+                  <li>Hilfe, was kann ich anziehen?<br/>
+                    <small>Komm am besten so wie ihr Euch wohlf&uuml;hlt. Da unsere Zeremonie im Wald hinter dem Haus stattfinden wird empfehlen wir euch bequeme gartentaugliche Schuhe (sind auch besser zum tanzen).</small>
+                  </li>
+                  <li>Ich m&ouml;chte Euch was schenken, ich wei&szlig; aber nicht was.<br/><small>Knete geht immer.</small></li>
+                  <li>Ich m&ouml;chte gerne mit meiner Kutsche kommen. Wo kann ich sie parken?<br/><small>Am Bahnhof von Borkheide gibt es ausreichen Parkpl&auml;tze.</small></li>
+                </ul>
+               </div>
+             </div>
            </div>
           }
         </main>
         {this.state.loaded &&
-          <footer className="container Footer">
-             <p>Wir freuen uns unglaublich darauf mit Euch allen kräftig zu feiern!</p>
-             <img src={heart} alt="coming" className="heart" />
-             <span className="Footer-signature">Andreas & Daniela</span>
-          </footer>
+         <footer className="container Footer">
+           <p>Wir freuen uns unglaublich darauf mit Euch allen kräftig zu feiern!</p>
+           <img src={heart} alt="coming" className="heart" />
+           <span className="Footer-signature">Andreas & Daniela</span>
+         </footer>
         }
       </div>
     );

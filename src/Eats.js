@@ -3,8 +3,8 @@ import Radio from './Radio';
 const Eats = ({ value, onChange, name }) => (
   <form className="Eats">
     <h2>
-      { name && ` Was möchtest Du essen, ${name}?`}
-      { !name && `Was möchtest Du essen?`}
+      { name && ` Wie möchtest Du essen, ${name}?`}
+      { !name && `Wie möchtest Du essen?`}
     </h2>
     <Radio
       label="Vegetarisch"

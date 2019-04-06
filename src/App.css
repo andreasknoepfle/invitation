@@ -33,19 +33,45 @@ footer.Footer {
 .App-logo { margin-top: -20px; }
 
 .extra {
-  background-color: #ffeecc;
-  border: 1px solid black;
+  background-color: #efdebc;
+  border: 1px solid #eeeeee;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
+  border-left: 0.3rem solid #fd5012;
 }
 
 .Invitation-item {
   text-align: center;
 }
 
+.wedding {
+  text-decoration: underline #151927;
+}
+
 .Greeting {
-  margin-bottom: 4em;
+  margin-bottom: 2.5em;
+}
+
+.Bubble {
+	position: relative;
+  background-color: #efdebc;
+  padding: 0.7em;
+  border-radius: 0.5em;
+}
+.Bubble:after {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #efdebc;
+	border-width: 10px;
+	margin-top: -10px;
 }
 
 .Greeting, header {
@@ -65,10 +91,11 @@ footer.Footer {
 }
 
 .icon {
+  margin-top: 2em;
   max-width: 60%;
 }
 
-.Sleeping ul li {
+ul li {
   /*
     * We want the bullets outside of the list,
     * so the text is aligned. Now the actual bullet
