@@ -42,8 +42,8 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchRecord(this.state.key)
-      .then(({ food, firstName, gender, partner, comes, extra}) => {
-        this.setState({ food, firstName, gender, partner, extra, comes, loaded: !partner });
+      .then(({ food, firstName, gender, partner, comes, extra, children}) => {
+        this.setState({ food, firstName, gender, partner, extra, children, comes, loaded: !partner });
         if(partner) {
           this.fetchPartner(partner);
         }
@@ -140,6 +140,7 @@ class App extends Component {
                      name={this.state.partnerFirstName}
                      onChange={this.onChangePartnerComes.bind(this)}
                    />}
+                 { this.state.children && "Kinder sind immer willkommen."}
                </div>
              </div>
              { (this.state.comes === "Ja" || this.state.partnerComes === "Ja" ) &&
